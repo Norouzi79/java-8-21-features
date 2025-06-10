@@ -1,4 +1,3 @@
-
 # Java Features from Java 9 to Java 21
 
 Here’s an extensive list of features that have remained in Java from **Java 9** to **Java 21**. These features have stayed in the language due to their usefulness, efficiency, and stability.
@@ -343,3 +342,73 @@ Record patterns allow deconstruction of records in `instanceof` expressions, mak
   }
   ```
 
+## 31. Text Blocks (Java 13)
+Java 13 introduced text blocks to handle multi-line strings, making it easier to work with complex text (e.g., JSON, SQL).
+- **Why it stayed**: Text blocks improve readability and simplify managing multi-line strings.
+- **Example**:
+```java
+String json = """
+    {
+        "name": "John",
+        "age": 30
+    }
+    """;
+````
+
+## 32. Improved java.lang APIs (Java 9 onwards)
+
+Java continuously improves the `java.lang` API with new features and enhancements.
+
+* **Why it stayed**: Provides foundational improvements to support a more powerful and flexible runtime.
+* **Example**:
+
+```java
+// New methods in `Throwable` for better stack trace handling
+Throwable t = new Exception();
+t.printStackTrace();
+```
+
+## 33. Performance Improvements (Java 9 to Java 21)
+
+Each release from Java 9 to Java 21 has included optimizations to improve overall performance.
+
+* **Why it stayed**: Java's ongoing performance optimizations help keep it competitive in the modern software development landscape.
+* **Example**: Performance improvements are often transparent, but developers benefit from reduced startup time and better runtime efficiency.
+
+
+## 34. New Java Packaging Tool (Java 14)
+Java introduced the Java Packaging Tool (jpackage) in Java 14, which allows you to create native installers for Java applications.
+- **Why it stayed**: jpackage makes it easier to distribute Java applications on various platforms.
+- **Example**:
+```bash
+jpackage --name MyApp --input ./dist --main-class com.example.Main
+````
+
+## 35. Improved jlink (Java 9 onwards)
+
+The jlink tool continues to evolve, enabling developers to create customized runtime images of their Java applications.
+
+* **Why it stayed**: Helps reduce application size by allowing only necessary modules to be included in the runtime image.
+* **Example**:
+
+```bash
+jlink --module-path $JAVA_HOME/jmods --add-modules java.base,java.xml --output custom-runtime
+```
+
+## 36. Security Enhancements (Java 9 to Java 21)
+
+Java introduced several security improvements throughout versions, including better handling of cryptography, certificates, and key management.
+
+* **Why it stayed**: These improvements help ensure Java remains a secure platform for building enterprise applications.
+* **Example**: Use of updated cryptographic libraries and support for modern certificate formats.
+
+## 37. Rewritten Security Manager (Java 17)
+
+Java 17 introduced a rewritten Security Manager to provide better security in managing application access to system resources.
+
+* **Why it stayed**: This security model aligns better with modern security practices.
+* **Example**:
+
+```java
+SecurityManager security = System.getSecurityManager();
+```
